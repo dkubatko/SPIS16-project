@@ -1,0 +1,6 @@
+first_name daniil
+last_name kubatko
+country ca
+age 18
+major cs
+nickname drazzzer

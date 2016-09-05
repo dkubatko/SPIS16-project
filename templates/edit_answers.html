@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Change answers.{% endblock %}
+
+{% block content %}
+
+<form action="/edit_result" method="post" enctype="multipart/form-data">
+   {%for item in data%}
+   {% if item != "profile_pic"%}
+   {{cdata[item]}}:<br>
+   <input type = "text" name = {{item}} value = "{{data[item]}}"> <br>
+   {% endif %}
+  
+   {% endfor %} 
+   Sequrity code:<br>
+   <img src="{{ url_for('static', filename = captcha) }}" alt="" style="width:200px;height:50px;"> <br>
+   <input type = "text" name = "security_code"  placeholder = "Enter the code from captcha"><br>
+   Upload your profile picture: <br>
+   <label id="label_file" for="file">Upload file</label>
+   <input id="file" type = "file" name="profile_pic"> <br> <br>  
+  
+   <input type = "submit" placeholder = "submit"><br>
+</form>
+
+<p>Enter your answers, then click Submit</p>
+
+{% endblock %}

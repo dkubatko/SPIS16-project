@@ -1,0 +1,194 @@
+
+
+h1 {
+
+       font-size: 50px;
+       font-family: Segoe UI;
+	   line-height: 0.8;
+	   text-shadow: 1px 1px white;
+}
+
+h3 {
+	   font-weight:normal;
+       font-size: 30px;
+       font-family: Segoe UI;
+	   line-height: 1;
+	   text-shadow: 1px 1px white;
+}
+
+p {
+
+	font-size: 35px;
+    font-family: Segoe UI;
+	text-shadow: 1px 1px white;
+
+}
+#first_line {
+	font-size: 25px;
+	font-family: Segoe UI;
+	font-style: italic;
+}
+
+head {
+	font-size: 60px;
+        text-align: center;
+	color: #000000;
+        font-family: "Times New Roman", Times, serif;
+}
+
+body {
+	line-height: 1.8;
+	font-size: 30px;
+	background-image: url("new_bg.jpg");
+	text-align: center;
+	color: #000000;
+        font-family: Segoe UI;
+	text-decoration: none;
+
+}
+
+a {
+
+	text-shadow: 1px 1px white;
+	font-size: 40px;
+    outline: none;
+    text-decoration: none;
+    font-family: Segoe UI;
+    color: #000000
+}
+
+a:link {
+	text-shadow: 1px 1px white;
+	font-size: 40px;
+    outline: none;
+    text-decoration: none;
+    font-family: Segoe UI;
+    color: #000000
+}
+
+a:visited {
+
+	text-shadow: 1px 1px white;
+	font-size: 40px;
+    outline: none;
+    text-decoration: none;
+    font-family: Segoe UI;
+    color: #000000
+}
+
+a:active {
+
+    text-shadow: 1px 1px black;
+	font-size: 40px;
+    outline: none;
+    text-decoration: none;
+    font-family: Segoe UI;
+    color: white
+}
+
+input  {
+    width: 30%;
+}
+
+input[type=text] {
+    border-radius: 100px;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    font-family: Segoe UI;
+
+}
+
+
+
+
+input[type=button], input[type=submit], input[type=reset] {
+    width: 17%;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 15px 2px;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+
+
+}
+
+.top5im {
+   position: relative;
+   width: 100%;
+}
+
+#im {
+   position: absolute;
+   top: -38px;
+   left: 0;
+   width: 100%;
+   font-size: 35px;
+   font-family: Segoe UI;
+}
+
+#items {
+	line-height: 1.8;
+	padding: 3px 2px;
+	font-size: 35px;
+	font-family: Segoe UI;
+	margin: 10px 4px;
+}
+
+#error {
+    font-size: 35px;
+    font-family: Segoe UI;
+    color: red;
+    line-height: 10;
+}
+
+#success {
+    font-size: 35px;
+    font-family: Segoe UI;
+    color: black;
+    line-height: 10;
+}
+#upper {
+	text-transform: uppercase;
+}
+
+#back:link {
+    padding: 6px 100px;
+    background-color: white;
+    font-size: 23px;
+    line-height: 40px;
+    font-family: Segoe UI;
+}
+
+#back:active {
+    color: black;
+    background-color: #e6eeff;
+    line-height: 40px;
+    font-family: Segoe UI;
+}
+
+#label_file {
+  font-size: 25px;
+  font-family: Segoe UI;
+  padding: 5px 30px;
+  background-color: white;
+  float: center;
+  width: 30%;
+  }
+
+#file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+
+

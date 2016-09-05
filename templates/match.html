@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}TOP5 Results{% endblock %}
+
+
+{% block content %}
+
+	<h1> Here is your match with {{full_name[0]}}, {{full_name[1]}}. </h1>
+	<hr>
+   {%if match['country'][0]%}
+        <p> Both of you are from {{match['country'][1]}}:</p>
+		<img src="{{ url_for('static', filename = cmap) }}" alt="No map for that area :(" style="width:600px;height:450px;"> <br>
+		<hr>
+   {%endif%}
+
+   {%if match['college'][0]%}
+        <p> You are in the same college! </p>
+		<img src="{{ url_for('static', filename = college_im) }}" alt="No image for this college :(" style="width:350px;height:350px;">
+		<hr>
+   {%endif%}
+
+   <p> Movies to watch together: </p>
+
+	{% for movie in movies %}
+	<img src={{movie[1][2]}} alt="" style="width:300px;height:450px;">
+	{% endfor %}
+	 <hr>
+
+   {%if match['pokemon_team'][0] and match['pokemon_team'][1] != ''%}
+        <p> Hey, you are both Team {{match['pokemon_team'][1][0].upper() + match['pokemon_team'][1][1:]}}! </p>
+		<img src="{{ url_for('static', filename = pokeim) }}" alt="No map for that area :(" style="width:600px;height:550px;">
+		<hr>
+   {%endif%}
+
+   {% if make_band %}
+	   <p> What about forming a MUSIC BAND with SPIS students? </p>
+	   {% for elem in band %}
+			<h3> {{elem}} can play on {{band[elem]}}</h3>
+	   {% endfor %}
+	   <hr>
+	{% endif %}
+
+	{% if match['sad'][0] and match['sad'][1] == 'yes'%}
+	   <p> Welcome to sad. Enjoy. </p>
+	   <img src="{{ url_for('static', filename = 'sad/sad.jpg') }}" alt=":(" style="width:400px;height:400px;">
+	   <hr>
+	{% endif %}
+
+{% endblock %}

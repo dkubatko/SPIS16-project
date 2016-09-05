@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}TOP5 Results{% endblock %}
+
+
+{% block content %}
+
+	<h1> Here are TOP5 people in SPIS who match to you. </h1> <br>
+   {%for user in t5%}
+     {% for item in user %}
+	   <form action="/match" method="post">
+	   <input type="hidden" name="users" value="{{item}},{{cur_name}}">
+       <input type="submit" value={{t5_data[item][1]}}><br>
+	   </form>
+	   <img src="{{ url_for('static', filename = us_pic[item]) }}" alt="" style="width:315px;height:315px;">
+	   <div class = "top5im">
+		 <img src="{{ url_for('static', filename = pics[item]) }}" alt="" style="width:315px;height:50px;">
+		 <h2 id="im"> {{per[item]}}% </h2>
+	   </div>
+		 <br>
+     {% endfor %}
+   {% endfor %}	 
+   
+<p id="items">Do you want more info? Click on a nickname and get it!!!</p>
+
+{% endblock %}
+	

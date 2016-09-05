@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}SPIS16 Survey{% endblock %}
+
+{% block content %}
+<h1> Answer the following questions, please. </h1>
+     <h3>All of them are optional (except required ones), <br>
+	 More questions you answer - more accurate data you will receive! </h3>
+	 <br>
+<form action="result" method="post" autocomplete="on" enctype="multipart/form-data">
+  Your unique username to access system:<br>
+  <input type="text" name="nickname" placeholder="Remember it after registering!"><br>
+  First name:<br>
+  <input type="text" name="first_name" placeholder="Required" ><br>
+  Last name:<br>
+  <input type="text" name="last_name" placeholder="Required" ><br>
+  Home country (state code if inside US):<br>
+  <input type="text" name="country" placeholder="e.g. CA, MA or if outside India, China, etc"><br>
+  Your current age:<br>
+  <input type="text" name="age" placeholder="21 (numbers only)"><br>
+  Your major:<br>
+  <input type="text" name="major" placeholder="One of CS, MCS, COGS, CE, ECE, etc"><br>
+  List your favorite movies:<br>
+  <input type="text" name="movie" placeholder="e.g. Harry Potter (series prefered)"><br>
+  Do you like old movies or new ones? 1 - new, 5 - old <br>
+  <input type="text" name="old" placeholder="1, 2, 3, 4 or 5"><br>
+  What Pokemon Team are you in?<br>
+  <input type="text" name="pokemon_team" placeholder="One of Mystic, Instinct or Valor"><br>
+  Your college:<br>
+  <input type="text" name="college" placeholder="One of Muir, Revelle, ERC, Marshall"><br>
+  List your favorite types of food:<br>
+  <input type="text" name="food" placeholder="e.g. pasta, sushi, pizza, etc"><br>
+  List musical instruments you can play:<br>
+  <input type="text" name="instrument" placeholder="e.g. guitar, violin, drums, etc"><br>
+  List your favorite types of sports (to watch/play):<br>
+  <input type="text" name="sport" placeholder="e.g. football, dota, volleyball, etc"><br>
+  Do you know languages other than English? If yes, list them:<br>
+  <input type="text" name="language" placeholder="e.g. Spanish, Chinese, Chamicuro, etc"><br>
+  CSE: 8 or 11:<br>
+  <input type="text" name="course" placeholder="Just number: 8 or 11"><br>
+  Do you like anime?:<br>
+  <input type="text" name="anime" placeholder="YES! or yes"><br>
+  Favorite music genres:<br>
+  <input type="text" name="anime" placeholder="e.g. Rock, Jazz, Classical, etc"><br>
+  Sadboys/Sadgirls?<br>
+  <input type="text" name="sad" placeholder="Yes or No"><br>
+
+
+
+  Upload your profile picture: <br>
+  <label id="label_file" for="file">Upload file</label>
+  <input id="file" type = "file" name="profile_pic"> <br>
+  Sequrity code:<br>
+  <img src="{{ url_for('static', filename = captcha) }}" alt="" style="width:200px;height:50px;"> <br>
+  <input type = "text" name = "security_code"  placeholder = "Enter the code from captcha"><br>
+  <input type="submit" placeholder="Submit">
+</form>
+
+<p>Enter your answers, then click Submit</p>
+
+{% endblock %}

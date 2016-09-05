@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Hello, SPIS student!{% endblock %}
+
+{% block content %}
+<form action="/top5" autocomplete="off">
+	<br>
+	Enter your username:<br>
+	<input type="text" name="nickname" placeholder="Your unique nickname">
+	<br>
+	<input type="submit" value="Search best matches">
+
+</form>
+
+<li><a href="/forgot">Forgot nickname?</a></li>
+
+{% endblock %}

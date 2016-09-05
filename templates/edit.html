@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Edit answers{% endblock %}
+
+{% block content %}
+<form action="/edit_answers" autocomplete="off">
+	<br>
+	Enter your username:<br>
+	<input type="text" name="nickname" placeholder="Your unique nickname">
+	<br>
+	<input type="submit" value="Edit my answers">
+
+</form>
+
+<li><a href="/forgot">Forgot nickname?</a></li>
+
+{% endblock %}
