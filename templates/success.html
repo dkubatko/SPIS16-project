@@ -4,9 +4,8 @@
 {% block title %}Success{% endblock %}
 
 {% block content %}
-
-<p id="success">Thank you, {{name}}!</p>
-
-
+<p id="success">Thank you, {{name}}!</p> <br>
+ <img src="{{ url_for('static', filename = pic) }}" alt="" style="width:315px;height:315px;">
+ <p> You can change your profile pic with "Edit answers to survey" </p>
 
 {% endblock %}

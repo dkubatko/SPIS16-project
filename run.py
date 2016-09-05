@@ -108,12 +108,20 @@ def render_result():
                     #filename = secure_filename(photo.filename)
                     photo.save('static/pics/' + results['nickname'] + '.' + photo.filename.rsplit('.', 1)[1])
                     results['profile_pic'] = 'pics/' + results['nickname'] + '.' + photo.filename.rsplit('.', 1)[1]
+                    pic = 'pics/' + results['nickname'] + '.' + photo.filename.rsplit('.', 1)[1]
+                    print getSize('static/pics/' + results['nickname'] + '.' + photo.filename.rsplit('.', 1)[1])/1024.0
+                    if getSize('static/pics/' + results['nickname'] + '.' + photo.filename.rsplit('.', 1)[1])/1024.0 > 2000:
+                        set_default_pic('static/pics/' + results['nickname'] + '.jpeg')
+                        results['profile_pic'] = 'pics/' + results['nickname'] + '.jpeg'
+                        pic = 'pics/' + results['nickname'] + '.jpeg'
+                        
                 else:
                     set_default_pic('static/pics/' + results['nickname'] + '.jpeg')
                     results['profile_pic'] = 'pics/' + results['nickname'] + '.jpeg'
+                    pic = 'pics/' + results['nickname'] + '.jpeg'
 
                 save_res(results)
-                return render_template('success.html', name = req['first_name'])
+                return render_template('success.html', name = req['first_name'], pic = pic)
                 #log.write(str('Successfully added ' + results['nickname'] + ' IP:' + request.environ.get('HTTP_X_REAL_IP', request.remote_addr))+ '\n')
             else:
                 return render_template('error.html', error = check(results)[1])
@@ -204,11 +212,18 @@ def check(arr):
 
         return True, 'none'
 
+
+def getSize(fileobject):
+    statinfo = os.stat(fileobject)
+    return statinfo.st_size
+
+
 def check_file(f):
     if f.filename == '' or f.filename == ' ':
         return False
     if f.filename.rsplit('.', 1)[1] not in ['jpg', 'jpeg', 'png']:
         return False
+    
     return True
 
 

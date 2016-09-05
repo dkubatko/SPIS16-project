@@ -150,7 +150,6 @@ input[type=button], input[type=submit], input[type=reset] {
     font-size: 35px;
     font-family: Segoe UI;
     color: black;
-    line-height: 10;
 }
 #upper {
 	text-transform: uppercase;
