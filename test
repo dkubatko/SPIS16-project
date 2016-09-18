@@ -1,0 +1,9 @@
+f = open('users.json')
+result = []
+for elem in f:
+    result.append(eval(elem))
+f.close()
+for elem in result:
+    elem['facebook'] = ''
+
+    

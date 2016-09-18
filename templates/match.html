@@ -45,5 +45,10 @@
 	   <img src="{{ url_for('static', filename = 'sad/sad.jpg') }}" alt=":(" style="width:400px;height:400px;">
 	   <hr>
 	{% endif %}
-
+	
+	{% if fb_page %}
+	   <a id="fbpage" href="https://{{fb_page}}"> Contact on Facebook! </a>
+	   <hr>
+	{% endif %}
+	
 {% endblock %}

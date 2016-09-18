@@ -179,6 +179,11 @@ input[type=button], input[type=submit], input[type=reset] {
   width: 30%;
   }
 
+#what_is {
+	font-size: 20px;
+	font-family: Segoe UI;
+} 
+ 
 #file {
 	width: 0.1px;
 	height: 0.1px;
@@ -188,6 +193,25 @@ input[type=button], input[type=submit], input[type=reset] {
 	z-index: -1;
 }
 
-
+#fbpage {
+	width: 17%;
+    background-color: #000099;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+	text-shadow: none;
+    margin: 15px 2px;
+    outline: none;
+    cursor: pointer;
+    font-size: 35px;
+	line-height: 8;
+	text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+	
+}
 
 

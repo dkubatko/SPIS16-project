@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}What is Facebook username?{% endblock %}
+
+{% block content %}
+<p> Facebook Username is a part of a link to your facebook page. <br>
+For example, in the link <i>facebook.com/username</i> <i>username</i> is what you want.</p> <br>
+<p> To get it: go to <a href='facebook.com'>facebook</a> and then click settings.</p> <br>
+<img src="{{ url_for('static', filename = 'fb_username/1.png') }}" alt="" style="width:700px;height:450px;"> <br>
+<p> Now you can see 'username'. If you already have one, just copy it. </p> <br>
+<img src="{{ url_for('static', filename = 'fb_username/2.png') }}" alt="" style="width:700px;height:450px;"> <br>
+<p> Else, set it and copy. <p> <br>
+<img src="{{ url_for('static', filename = 'fb_username/3.png') }}" alt="" style="width:700px;height:450px;"> <br>
+<p> You are done!<p>
+<a class="backbutton" onclick="goBack()">Back</a>
+
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+{% endblock %}
